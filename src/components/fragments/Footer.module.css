@@ -1,0 +1,11 @@
+@import "../../colors.css";
+
+.main-footer {
+  height: 67.23px;
+  background-color: var(--dark-footer-color);
+  color: var(--footer-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}

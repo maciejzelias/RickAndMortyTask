@@ -1,0 +1,22 @@
+@import "../../colors.css";
+
+.main-header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--aquamarine-color);
+  height: 95px;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  border-bottom: 95px solid var(--cyan-color);
+  border-left: 30px solid transparent;
+  height: 0;
+  width: 50%;
+}

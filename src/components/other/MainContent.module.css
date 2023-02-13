@@ -1,0 +1,19 @@
+.main-container {
+  flex: 1;
+  margin-top: 119px;
+  margin-bottom: 147px;
+  margin-right: 259px;
+  margin-left: 180px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.leftContent img {
+    margin-bottom: 126px;
+}

@@ -1,0 +1,17 @@
+.text {
+  margin-left: 17px;
+  font-size: 60px;
+  font-family: lato-regular;
+  font-weight: 72;
+}
+
+.titleText {
+  color: var(--cyan-color);
+  font-size: 70px;
+  font-family: lato-bold;
+  font-weight: 84;
+}
+
+.bold {
+  font-family: lato-bold;
+}

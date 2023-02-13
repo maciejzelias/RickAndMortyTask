@@ -22,3 +22,22 @@
   height: 0;
   width: 994px;
 }
+
+@media all and (max-width: 700px) {
+  .main-header {
+    justify-content: center;
+    height: 71px;
+  }
+
+  .main-header h1 {
+    flex: 1;
+    margin: 18px 0px 17px 0px;
+    width: auto;
+    font-size: 30px;
+    font-weight: 36;
+  }
+
+  .right {
+    display: none;
+  }
+}

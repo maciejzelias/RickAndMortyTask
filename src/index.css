@@ -34,3 +34,17 @@ main {
   flex: 1;
   display: flex;
 }
+
+@media all and (max-width: 700px) {
+  html {
+    background: white;
+    min-width: 0;
+  }
+  .root {
+  }
+
+  main {
+    flex: none;
+    display: flex;
+  }
+}

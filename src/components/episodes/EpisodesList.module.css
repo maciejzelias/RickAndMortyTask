@@ -1,0 +1,41 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+ul {
+  margin-top: 17px;
+  margin-bottom: 20px;
+}
+
+.list li {
+  display: flex;
+  flex-direction: column;
+  height: 69px;
+}
+
+.list hr {
+  margin-right: 29.5px;
+  margin-left: 33.5px;
+  border: 0;
+  border-right: 1px solid var(--divider-color);
+}
+
+.list ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.rightList li:nth-child(even) {
+  color: var(--aquamarine-text-color);
+}
+.rightList li:nth-child(odd) {
+  color: var(--cyan-color);
+}
+
+.episodeId {
+  font-family: lato-bold;
+  font-size: 25px;
+}

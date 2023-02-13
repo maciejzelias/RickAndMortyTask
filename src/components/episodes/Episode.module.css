@@ -1,0 +1,12 @@
+
+.title {
+  font-family: lato-bold;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.date {
+  font-family: lato-bold;
+  font-size: 20px;
+  color: var(--grey-text-color);
+}

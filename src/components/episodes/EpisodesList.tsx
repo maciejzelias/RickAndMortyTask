@@ -13,7 +13,7 @@ interface EpisodeData {
 }
 
 export default function EpisodesList() {
-  const [episodes, setEpisodes] = useState<episodeModel[]>([
+  const [episodes, setEpisodes] = useState<any[]>([
     {
       episode: "S04E01",
       name: "Edge of Tomorty: Rick, Die, Rickpeat",
@@ -65,19 +65,19 @@ export default function EpisodesList() {
       air_date: "31.03.2020",
     },
   ]);
-  const { loading, error, data } = useQuery<EpisodeData>(GET_EPISODES_SEASON_4);
+  // const { loading, error, data } = useQuery<EpisodeData>(GET_EPISODES_SEASON_4);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
-  if (!data) {
-    return null;
-  }
+  // if (loading) {
+  //   return <p>Loading...</p>;
+  // }
+  // if (error) {
+  //   return <p>Error: {error.message}</p>;
+  // }
+  // if (!data) {
+  //   return null;
+  // }
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className={styles.list}>

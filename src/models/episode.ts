@@ -1,5 +1,5 @@
 export type Episode = {
-  id: string;
-  title: string;
-  date: string;
+  episode: string;
+  name: string;
+  air_date: string;
 };

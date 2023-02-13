@@ -9,8 +9,8 @@ interface episodeProps {
 export default function Episode({ props }: episodeProps) {
   return (
     <li>
-      <h2 className={styles.title}>{props.title}</h2>
-      <h3 className={styles.date}>{props.date}</h3>
+      <h2 className={styles.title}>{props.name}</h2>
+      <h3 className={styles.date}>{props.air_date}</h3>
     </li>
   );
 }

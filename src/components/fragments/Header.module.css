@@ -1,22 +1,24 @@
 @import "../../colors.css";
 
 .main-header {
-  top: 0;
-  left: 0;
-  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   background-color: var(--aquamarine-color);
   height: 95px;
 }
 
-.left {
-  width: 50%;
+.main-header h1 {
+  display: flex;
+  justify-content: center;
+  width: 238px;
+  margin: 24px 0 23px 65px;
+  font-family: lato-bold;
+  font-size: 35px;
 }
 
 .right {
   border-bottom: 95px solid var(--cyan-color);
-  border-left: 30px solid transparent;
+  border-left: 55px solid transparent;
   height: 0;
-  width: 50%;
+  width: 939px;
 }

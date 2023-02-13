@@ -1,3 +1,8 @@
+@font-face {
+  font-family: lato-bold;
+  src: url("./fonts/Lato-Bold.ttf");
+}
+
 * {
   margin: 0;
 }

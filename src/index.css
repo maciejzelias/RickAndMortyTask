@@ -3,22 +3,34 @@
   src: url("./fonts/Lato-Bold.ttf");
 }
 
+@font-face {
+  font-family: lato-regular;
+  src: url("./fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: lato-italic;
+  src: url("./fonts/Lato-Italic.ttf");
+}
+
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   background: #ffff;
-  min-width: 1280px;
+  min-width: 1440px;
 }
 
 #root {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   min-height: 100vh;
 }
 
 main {
-  margin: auto;
+  flex: 1;
+  display: flex;
 }

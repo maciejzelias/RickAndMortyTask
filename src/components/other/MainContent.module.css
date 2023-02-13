@@ -9,11 +9,12 @@
 }
 
 .leftContent {
+  margin-top: 1px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .leftContent img {
-    margin-bottom: 126px;
+  margin-bottom: 126px;
 }

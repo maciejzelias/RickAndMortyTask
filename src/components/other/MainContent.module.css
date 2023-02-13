@@ -9,6 +9,7 @@
 }
 
 .leftContent {
+  margin-top: 1px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -19,7 +19,9 @@ export default function Episode({ props, index, length }: episodeProps) {
       <h2 className={styles.title}>{props.name}</h2>
       <h3 className={styles.date}>{props.air_date}</h3>
       {isMobileView && index + 1 !== length && (
-        <hr className={styles.horizontalDivider}></hr>
+        <hr
+          data-testid="horizontal-divider"
+          className={styles.horizontalDivider}></hr>
       )}
     </li>
   );

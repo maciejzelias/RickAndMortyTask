@@ -5,7 +5,7 @@ import styles from "./MainContent.module.css";
 
 export default function MainContent() {
   return (
-    <main>
+    <main data-testid="main-content">
       <section className={styles["main-container"]}>
         <div className={styles.leftContent}>
           <Description />

@@ -11,12 +11,26 @@
 }
 
 @media all and (max-width: 700px) {
+  .horizontalDivider {
+    border: 0;
+    border-bottom: 1px solid var(--divider-color);
+    margin-top: 20px;
+    margin-bottom: 12px;
+  }
+
   .title {
     font-size: 18px;
-    margin-bottom: 0;
+    margin-bottom: 15px;
   }
 
   .date {
     font-size: 15px;
+  }
+
+  .episode {
+    font-size: 18px;
+    font-family: lato-bold;
+    color: #000000;
+    margin-bottom: 13px;
   }
 }

@@ -19,9 +19,11 @@
 
 @media all and (max-width: 700px) {
   .text {
+    margin-right: 58px;
     margin-left: 0px;
     font-size: 35px;
     font-weight: 42;
+    margin-bottom: 10px;
   }
 
   .titleText {

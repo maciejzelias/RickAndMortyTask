@@ -15,7 +15,7 @@ ul {
   height: 69px;
 }
 
-.list hr {
+.verticalDivider {
   margin-right: 29.5px;
   margin-left: 33.5px;
   border: 0;
@@ -48,9 +48,7 @@ ul {
     margin-top: 0px;
     margin-bottom: 0px;
   }
-  .list hr {
-    display: none;
-  }
+
   .episodeId {
     font-size: 18px;
   }
@@ -58,5 +56,15 @@ ul {
     display: flex;
     flex-direction: column;
     height: auto;
+    margin-bottom: 5px;
+  }
+
+  .verticalDivider {
+    display: none;
+  }
+
+  /* not displaying list with only episodes */
+  .list .leftList {
+    display: none;
   }
 }

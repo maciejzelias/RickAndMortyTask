@@ -7,13 +7,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.main-footer h1 {
   font-size: 16px;
   font-family: lato-bold;
 }
 
 @media all and (max-width: 700px) {
   .main-footer {
-    height: 48.72;
+    height: 48.72px;
+  }
+  .main-footer h1 {
     font-size: 14px;
+    margin-right: 19px;
+    margin-top: 2px;
   }
 }

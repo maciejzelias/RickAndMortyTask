@@ -1,7 +1,7 @@
 @import "../../colors.css";
 
 .main-footer {
-  height: 67.23px;
+  min-height: 67.23px;
   background-color: var(--dark-footer-color);
   color: var(--footer-text-color);
   display: flex;

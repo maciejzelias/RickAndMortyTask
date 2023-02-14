@@ -15,7 +15,7 @@ ul {
   height: 69px;
 }
 
-.list hr {
+.verticalDivider {
   margin-right: 29.5px;
   margin-left: 33.5px;
   border: 0;
@@ -38,4 +38,33 @@ ul {
 .episodeId {
   font-family: lato-bold;
   font-size: 25px;
+}
+
+@media all and (max-width: 700px) {
+  .list {
+    flex-direction: column;
+  }
+  ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .episodeId {
+    font-size: 18px;
+  }
+  .list li {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 5px;
+  }
+
+  .verticalDivider {
+    display: none;
+  }
+
+  /* not displaying list with only episodes */
+  .list .leftList {
+    display: none;
+  }
 }

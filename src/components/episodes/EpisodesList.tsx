@@ -15,8 +15,6 @@ interface EpisodeData {
 export default function EpisodesList() {
   const { loading, error, data } = useQuery<EpisodeData>(GET_EPISODES_SEASON_4);
 
-  let content;
-
   if (loading) {
     return <p>Loading...</p>;
   }
@@ -29,17 +27,22 @@ export default function EpisodesList() {
 
   return (
     <div className={styles.list}>
-      <ul>
+      <ul className={styles.leftList}>
         {data.episodes.results.map((res) => (
           <li key={res.episode}>
             <h2 className={styles.episodeId}>{res.episode}</h2>
           </li>
         ))}
       </ul>
-      <hr></hr>
+      <hr className={styles.verticalDivider}></hr>
       <ul className={styles.rightList}>
-        {data.episodes.results.map((res) => (
-          <Episode props={res} key={res.episode} />
+        {data.episodes.results.map((res, idx) => (
+          <Episode
+            props={res}
+            key={res.episode}
+            index={idx}
+            length={data.episodes.results.length}
+          />
         ))}
       </ul>
     </div>

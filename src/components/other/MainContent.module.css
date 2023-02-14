@@ -18,3 +18,27 @@
 .leftContent img {
   margin-bottom: 126px;
 }
+
+@media all and (max-width: 700px) {
+  .main-container {
+    margin-top: 41px;
+    margin-bottom: 61px;
+    margin-right: 25px;
+    margin-left: 25px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .leftContent {
+    margin-top: 0px;
+    align-items: center;
+  }
+
+  .leftContent img {
+    margin-top: 31px;
+    margin-bottom: 58px;
+    margin-right: 11px;
+    width: 351px;
+    height: 360px;
+  }
+}

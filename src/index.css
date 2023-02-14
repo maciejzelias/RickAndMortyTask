@@ -21,13 +21,13 @@
 
 html {
   background: #ffff;
-  min-width: 1600px;
+  min-width: 1710px;
 }
 
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 main {

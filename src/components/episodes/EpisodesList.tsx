@@ -16,18 +16,17 @@ export default function EpisodesList() {
     return null;
   }
 
-
   return (
     <div className={styles.list}>
-      <ul className={styles.leftList}>
+      <ol className={styles.episodesList}>
         {data.episodes.results.map((res) => (
           <li key={res.episode}>
-            <h2 className={styles.episodeId}>{res.episode}</h2>
+            <p className={styles.episodeId}>{res.episode}</p>
           </li>
         ))}
-      </ul>
+      </ol>
       <hr className={styles.verticalDivider}></hr>
-      <ul className={styles.rightList}>
+      <ol className={styles.titlesList}>
         {data.episodes.results.map((res, idx) => (
           <Episode
             props={res}
@@ -36,7 +35,7 @@ export default function EpisodesList() {
             length={data.episodes.results.length}
           />
         ))}
-      </ul>
+      </ol>
     </div>
   );
 }

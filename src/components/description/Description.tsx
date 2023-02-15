@@ -3,11 +3,11 @@ import styles from "./Description.module.css";
 
 export default function Description() {
   return (
-    <h1 className={styles.text}>
+    <h2 className={styles.text}>
       Episodes of the <span className={styles.bold}>4th</span>
       <br></br>
       season of the series<br></br>
       <span className={styles.titleText}>Rick and Morty</span>
-    </h1>
+    </h2>
   );
 }

@@ -1,11 +1,10 @@
 import React from "react";
-import { render, screen, waitFor, fireEvent } from "@testing-library/react";
-import { MockedResponse } from "@apollo/react-testing";
+import { render, screen } from "@testing-library/react";
 import { Episode as episodeModel } from "../../models/episode";
 import Episode from "./Episode";
 
 describe("Episode", () => {
-  it("renders the horizontal divider when it is mobile", async () => {
+  it("renders li element with proper values", async () => {
     //arrange
     const episode: episodeModel = {
       episode: "S04E01",
@@ -13,16 +12,16 @@ describe("Episode", () => {
       air_date: "November 10, 2019",
     };
 
-    render(<Episode key='0' props={episode} index={1} length={5} />);
-
-    await waitFor(() => {
-      global.window.innerWidth = 500;
-      global.window.dispatchEvent(new Event("resize"));
-    });
-
     //act
+    const { getByTestId } = render(
+      <Episode key="0" props={episode} index={1} length={5} />
+    );
 
     //assert
-    expect(screen.getByTestId("horizontal-divider")).toBeInTheDocument();
+    expect(getByTestId("episode-element")).toBeInTheDocument();
+    expect(
+      screen.getByText("Edge of Tomorty: Rick, Die, Rickpeat")
+    ).toBeInTheDocument();
+    expect(screen.getByText("November 10, 2019")).toBeInTheDocument();
   });
 });

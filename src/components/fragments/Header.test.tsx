@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import Header from "./Header";
 
 describe("Header", () => {
-  it("renders the h1 element with proper text", () => {
+  it("renders the p element with proper text", () => {
     //arrange, act
     render(<Header />);
     //assert

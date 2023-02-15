@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import Description from "./Description";
 
 describe("Description", () => {
-  it("renders the h1 element with proper text", () => {
+  it("renders the h2 element with proper text", () => {
     //arrange, act
     render(<Description />);
     //assert

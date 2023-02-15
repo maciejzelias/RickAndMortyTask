@@ -9,7 +9,7 @@ export default function MainContent() {
       <section
         data-testid="main-container"
         className={styles["main-container"]}>
-        <div data-testid="left-content" className={styles.leftContent}>
+        <div data-testid="info" className={styles.info}>
           <Description />
           <img src="/assets/image.png" alt="Error with loading image" />
         </div>

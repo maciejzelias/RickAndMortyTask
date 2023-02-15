@@ -9,16 +9,17 @@
   align-items: center;
 }
 
-.main-footer h1 {
+.main-footer p {
   font-size: 16px;
   font-family: lato-bold;
 }
 
 @media all and (max-width: 700px) {
   .main-footer {
+    min-height: auto;
     height: 48.72px;
   }
-  .main-footer h1 {
+  .main-footer p {
     font-size: 14px;
     margin-right: 19px;
     margin-top: 2px;

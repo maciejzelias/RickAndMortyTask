@@ -6,8 +6,10 @@ import styles from "./MainContent.module.css";
 export default function MainContent() {
   return (
     <main data-testid="main-content">
-      <section className={styles["main-container"]}>
-        <div className={styles.leftContent}>
+      <section
+        data-testid="main-container"
+        className={styles["main-container"]}>
+        <div data-testid="left-content" className={styles.leftContent}>
           <Description />
           <img src="/assets/image.png" alt="Error with loading image" />
         </div>

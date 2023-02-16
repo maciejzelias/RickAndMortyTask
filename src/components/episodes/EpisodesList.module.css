@@ -1,0 +1,67 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.list ol {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 17px;
+  margin-bottom: 20px;
+}
+
+.episodeId {
+  font-family: lato-bold;
+  font-size: 25px;
+}
+
+.list li {
+  display: flex;
+  flex-direction: column;
+  height: 69px;
+}
+
+.verticalDivider {
+  margin-right: 29.5px;
+  margin-left: 33.5px;
+  border: 0;
+  border-right: 1px solid var(--divider-color);
+}
+
+.titlesList li:nth-child(even) {
+  color: var(--aquamarine-text-color);
+}
+.titlesList li:nth-child(odd) {
+  color: var(--cyan-color);
+}
+
+@media all and (max-width: 700px) {
+  .list {
+    flex-direction: column;
+  }
+  .list ol {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .episodeId {
+    font-size: 18px;
+  }
+
+  .list li {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 5px;
+  }
+
+  .verticalDivider {
+    display: none;
+  }
+
+  /* not displaying list with only episodes */
+  .list .episodesList {
+    display: none;
+  }
+}

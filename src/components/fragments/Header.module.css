@@ -1,0 +1,43 @@
+@import "../../colors.css";
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--aquamarine-color);
+  height: 95px;
+}
+
+.main-header h1 {
+  display: flex;
+  justify-content: center;
+  width: 238px;
+  margin: 24px 0 23px 65px;
+  font-family: lato-bold;
+  font-size: 35px;
+}
+
+.right {
+  border-bottom: 95px solid var(--cyan-color);
+  border-left: 55px solid transparent;
+  height: 0;
+  width: 994px;
+}
+
+@media all and (max-width: 700px) {
+  .main-header {
+    justify-content: center;
+    height: 71px;
+  }
+
+  .main-header h1 {
+    flex: 1;
+    margin: 18px 0px 17px 0px;
+    width: auto;
+    font-size: 30px;
+    font-weight: 36px;
+  }
+
+  .right {
+    display: none;
+  }
+}

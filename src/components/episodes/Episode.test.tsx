@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { getByTestId, render, screen } from "@testing-library/react";
 import { Episode as episodeModel } from "../../models/episode";
 import Episode from "./Episode";
 
@@ -14,7 +14,7 @@ describe("Episode", () => {
 
     //act
     const { getByTestId } = render(
-      <Episode key="0" props={episode} index={1} length={5} />
+      <Episode key="0" props={episode} isLast={false} />
     );
 
     //assert

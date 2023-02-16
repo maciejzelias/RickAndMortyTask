@@ -21,13 +21,13 @@ describe("MainContent", () => {
   ];
   it("renders the main element", () => {
     //act
-    const { getByTestId } = render(
+    const { getByRole } = render(
       <MockedProvider mocks={mocks}>
         <MainContent />
       </MockedProvider>
     );
     //assert
-    expect(getByTestId("main-content")).toBeInTheDocument();
+    expect(getByRole("main")).toBeInTheDocument();
   });
 
   it("renders the section element", () => {

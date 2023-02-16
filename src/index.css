@@ -21,16 +21,30 @@
 
 html {
   background: #ffff;
-  min-width: 1600px;
+  min-width: 1710px;
 }
 
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 main {
   flex: 1;
   display: flex;
+}
+
+@media all and (max-width: 700px) {
+  html {
+    background: white;
+    min-width: 400px;
+  }
+  .root {
+  }
+
+  main {
+    flex: 1;
+    display: flex;
+  }
 }

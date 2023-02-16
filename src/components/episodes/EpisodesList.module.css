@@ -4,9 +4,17 @@
   justify-content: space-between;
 }
 
-ul {
+.list ol {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   margin-top: 17px;
   margin-bottom: 20px;
+}
+
+.episodeId {
+  font-family: lato-bold;
+  font-size: 25px;
 }
 
 .list li {
@@ -15,27 +23,45 @@ ul {
   height: 69px;
 }
 
-.list hr {
+.verticalDivider {
   margin-right: 29.5px;
   margin-left: 33.5px;
   border: 0;
   border-right: 1px solid var(--divider-color);
 }
 
-.list ul {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-
-.rightList li:nth-child(even) {
+.titlesList li:nth-child(even) {
   color: var(--aquamarine-text-color);
 }
-.rightList li:nth-child(odd) {
+.titlesList li:nth-child(odd) {
   color: var(--cyan-color);
 }
 
-.episodeId {
-  font-family: lato-bold;
-  font-size: 25px;
+@media all and (max-width: 700px) {
+  .list {
+    flex-direction: column;
+  }
+  .list ol {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .episodeId {
+    font-size: 18px;
+  }
+
+  .list li {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 5px;
+  }
+
+  .verticalDivider {
+    display: none;
+  }
+
+  /* not displaying list with only episodes */
+  .list .episodesList {
+    display: none;
+  }
 }

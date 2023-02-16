@@ -1,20 +1,36 @@
 .main-container {
   flex: 1;
-  margin-top: 119px;
-  margin-bottom: 147px;
-  margin-right: 259px;
-  margin-left: 180px;
+  margin: 119px 259px 147px 180px;
   display: flex;
   justify-content: space-between;
 }
 
-.leftContent {
+.info {
   margin-top: 1px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.leftContent img {
+.info img {
   margin-bottom: 126px;
+}
+
+@media all and (max-width: 700px) {
+  .main-container {
+    margin: 41px 25px 61px 25px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .info {
+    margin-top: 0px;
+    align-items: center;
+  }
+
+  .info img {
+    margin: 31px 11px 58px 0;
+    width: 351px;
+    height: 360px;
+  }
 }

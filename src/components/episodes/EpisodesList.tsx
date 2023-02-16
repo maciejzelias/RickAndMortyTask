@@ -1,21 +1,10 @@
-import React, { useState } from "react";
-
 import Episode from "./Episode";
-import { Episode as episodeModel } from "../../models/episode";
 import styles from "./EpisodesList.module.css";
+import { EpisodeData, GET_EPISODES_SEASON_4 } from "../../graphql";
 import { useQuery } from "@apollo/client";
-import { GET_EPISODES_SEASON_4 } from "../../graphql/getEpisodesCall";
-
-interface EpisodeData {
-  episodes: {
-    results: episodeModel[];
-  };
-}
 
 export default function EpisodesList() {
   const { loading, error, data } = useQuery<EpisodeData>(GET_EPISODES_SEASON_4);
-
-  let content;
 
   if (loading) {
     return <p>Loading...</p>;
@@ -29,19 +18,23 @@ export default function EpisodesList() {
 
   return (
     <div className={styles.list}>
-      <ul>
+      <ol className={styles.episodesList}>
         {data.episodes.results.map((res) => (
           <li key={res.episode}>
-            <h2 className={styles.episodeId}>{res.episode}</h2>
+            <p className={styles.episodeId}>{res.episode}</p>
           </li>
         ))}
-      </ul>
-      <hr></hr>
-      <ul className={styles.rightList}>
-        {data.episodes.results.map((res) => (
-          <Episode props={res} key={res.episode} />
+      </ol>
+      <hr className={styles.verticalDivider}></hr>
+      <ol className={styles.titlesList}>
+        {data.episodes.results.map((res, idx) => (
+          <Episode
+            props={res}
+            key={res.episode}
+            isLast={idx + 1 === data.episodes.results.length}
+          />
         ))}
-      </ul>
+      </ol>
     </div>
   );
 }

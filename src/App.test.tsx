@@ -24,13 +24,13 @@ describe("App", () => {
 
   it("renders the Header component", () => {
     //act
-    const { getByTestId } = render(
+    const { getByRole } = render(
       <MockedProvider mocks={mocks}>
         <App />
       </MockedProvider>
     );
     //assert
-    expect(getByTestId("header")).toBeInTheDocument();
+    expect(getByRole("banner")).toBeInTheDocument();
   });
 
   it("renders the MainContent component", () => {
@@ -46,12 +46,12 @@ describe("App", () => {
 
   it("renders the footer component", () => {
     //act
-    const { getByTestId } = render(
+    const { getByRole } = render(
       <MockedProvider mocks={mocks}>
         <App />
       </MockedProvider>
     );
     //assert
-    expect(getByTestId("footer")).toBeInTheDocument();
+    expect(getByRole("contentinfo")).toBeInTheDocument();
   });
 });

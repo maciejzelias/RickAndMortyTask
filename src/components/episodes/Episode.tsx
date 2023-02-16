@@ -9,7 +9,6 @@ interface episodeProps {
   length: number;
 }
 function Episode({ props, index, length }: episodeProps) {
-  console.log("elo");
   const isMobileView = useMediaQuery({
     query: "(max-width: 700px)",
   });

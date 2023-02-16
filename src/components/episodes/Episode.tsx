@@ -5,10 +5,9 @@ import { useMediaQuery } from "react-responsive";
 
 interface episodeProps {
   props: episodeModel;
-  index: number;
-  length: number;
+  isLast: boolean;
 }
-function Episode({ props, index, length }: episodeProps) {
+function Episode({ props, isLast }: episodeProps) {
   const isMobileView = useMediaQuery({
     query: "(max-width: 700px)",
   });
@@ -17,7 +16,7 @@ function Episode({ props, index, length }: episodeProps) {
       {isMobileView && <p className={styles.episode}>{props.episode}</p>}
       <p className={styles.title}>{props.name}</p>
       <p className={styles.date}>{props.air_date}</p>
-      {isMobileView && index + 1 !== length && (
+      {isMobileView && !isLast && (
         <hr data-testid className={styles.horizontalDivider}></hr>
       )}
     </li>

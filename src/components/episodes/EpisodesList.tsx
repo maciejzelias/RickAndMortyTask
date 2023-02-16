@@ -31,8 +31,7 @@ export default function EpisodesList() {
           <Episode
             props={res}
             key={res.episode}
-            index={idx}
-            length={data.episodes.results.length}
+            isLast={idx + 1 === data.episodes.results.length}
           />
         ))}
       </ol>

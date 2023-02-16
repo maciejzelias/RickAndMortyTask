@@ -14,7 +14,7 @@ describe("Episode", () => {
 
     //act
     const { getByTestId } = render(
-      <Episode key="0" props={episode} index={1} length={5} />
+      <Episode key="0" props={episode} isLast={false} />
     );
 
     //assert

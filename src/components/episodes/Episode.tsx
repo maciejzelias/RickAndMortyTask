@@ -8,8 +8,8 @@ interface episodeProps {
   index: number;
   length: number;
 }
-
-export default function Episode({ props, index, length }: episodeProps) {
+function Episode({ props, index, length }: episodeProps) {
+  console.log("elo");
   const isMobileView = useMediaQuery({
     query: "(max-width: 700px)",
   });
@@ -24,3 +24,5 @@ export default function Episode({ props, index, length }: episodeProps) {
     </li>
   );
 }
+
+export default React.memo(Episode);
